@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Intentional YouTube Blocker",
+    "version": "1.0",
+    "description": "Blocks YouTube homepage during productive hours.",
+    "permissions": ["storage", "tabs", "scripting"],
+    "host_permissions": ["*://www.youtube.com/*"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_start"
+      }
+    ]
+  }
