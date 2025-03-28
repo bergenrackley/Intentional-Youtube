@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Intentional YouTube Blocker",
+    "name": "Intentional YouTube",
     "version": "1.0",
     "description": "Blocks YouTube homepage during productive hours.",
     "permissions": ["storage", "tabs", "scripting"],
